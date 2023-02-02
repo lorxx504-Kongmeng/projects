@@ -10,11 +10,16 @@ function updateClock() {
     const minute = current.getMinutes();
     const second = current.getSeconds();
     const hourDeg = (hour / 12) * 360;
+    document.querySelector(".hour_d").textContent = `${hour} : `
+    document.querySelector(".minute_d").textContent = `${minute} : `
+    document.querySelector(".second_d").textContent = `${second}`
     document.querySelector(".hour").style.transform = `rotate(${hourDeg}deg)`
+
     const minuteDeg = (minute / 60) * 360;
     document.querySelector(".minute").style.transform = `rotate(${minuteDeg}deg)`
     const secondDeg = (second / 60) * 360;
     document.querySelector(".second").style.transform = `rotate(${secondDeg}deg)`
+
 
 }
 
